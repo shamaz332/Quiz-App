@@ -1,3 +1,4 @@
+import { type } from "os"
 
 
 export type QuestionsType = {
@@ -9,10 +10,18 @@ export type QuestionsType = {
     type: string
 }
 
-export type AnsType =
+export type QuestionsRenderType =
     {
         question: string
         answer: string
-        option: string
+        option: string[]
+        correct_answer: string
 
+    }
+
+
+    export type questionPropsType = 
+    {
+        question: string
+    option: string[]
     }
