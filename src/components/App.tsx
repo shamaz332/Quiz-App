@@ -1,9 +1,17 @@
 import React from 'react';
+import Navbar from "./smallComponents/Navbar"
+import Header from "./smallComponents/Header"
+import QuizMain from "./smallComponents/QuizMain"
 
 function App() {
+
   return (
-    <div className="App">
-     <h1>Hello TS</h1>
+
+    <div>
+
+      <Navbar />
+      <Header />
+      <QuizMain />
     </div>
   );
 }
