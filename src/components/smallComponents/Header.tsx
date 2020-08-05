@@ -20,8 +20,10 @@ export default function Header() {
                 <Grid item xs={12} sm={7}>
                     <img src={HeaderPic} alt="header" />
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <h1>Test your Knowledge with Quizy</h1>
+                <Grid item xs={12} sm={4}container>
+                    <h1 style={{
+                        marginTop:"20%"
+                    }}>Test your Knowledge with Quizy</h1>
                 </Grid>
 
             </Grid>

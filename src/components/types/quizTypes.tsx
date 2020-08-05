@@ -1,6 +1,3 @@
-import { type } from "os"
-
-
 export type QuestionsType = {
     category: string
     correct_answer: string
@@ -23,5 +20,7 @@ export type QuestionsRenderType =
     export type questionPropsType = 
     {
         question: string
-    option: string[]
+        option: string[]
+        callback:(e:React.FormEvent<EventTarget>,ans:string)=>void
+        // check: string
     }
