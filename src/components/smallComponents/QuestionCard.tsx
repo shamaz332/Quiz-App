@@ -24,11 +24,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
-export const QuestionCard: React.FC<questionPropsType> = ({
-  question,
-  option,
-  callback,
-}) => {
+export const QuestionCard: React.FC<questionPropsType> = ({question,option,callback,}) => {
   const classes = useStyles();
   const [value, setValue] = useState([]);
   const [ans, setAns] = useState("")

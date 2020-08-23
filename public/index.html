@@ -11,24 +11,79 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
    
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    
+    <link rel="manifest" href="manifest.webmanifest"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/icon1.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/icon2.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/icon3.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./icon/icon4.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/icon5.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./icon/icon6.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./icon/icon7.png">
     <title>Quiz App</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .navbar {
+        background-color: #4169e1;
+      }
+      .navbar h3 {
+        display: inline-block;
+        text-align: left;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+      }
+      .navbar a {
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .page-info {
+        padding: 10px;
+      }
+      .Current {
+        color: #2e8b57;
+      }
+      .Completed {
+        color: #ff6347;
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
+    <div class="navbar">
+      <h3>Task Manager</h3>
+      <a href="/">Current Tasks</a>
+      <a href="/completed">Completed Tasks</a>
+    </div>
+    <p class="page-info">
+      Loading...
+    </p>
+  <!-- PWA APP  -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('worker.js').then(function (registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function (err) {
+          console.log('Worker registration failed', err);
+        }).catch(function (err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+  </script>
   </body>
 </html>
