@@ -1,12 +1,4 @@
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
+1__ Ceate firebase-messaging-sw.js file in public folder
+2__ visit this link (https://github.com/firebase/quickstart-js/tree/bdd17258e33c017eaf0fd5d09eaeacbbdaa6f1fa/messaging)
+3__ create firebaseService/firebaseService.js in src
+4__import randomNotification() from firebaseService.js to app/.tsx
